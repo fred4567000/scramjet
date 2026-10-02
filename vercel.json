@@ -16,7 +16,8 @@
     "bootstrap": {
       "root": "packages/bootstrap",
       "runtime": "node",
-      "entrypoint": "index.js"  // 👈 Change this to your main backend file if it isn't index.js
+      "buildCommand": "tsc",
+      "entrypoint": "dist/index.js"
     },
     "demo": {
       "root": "packages/demo",
