@@ -16,8 +16,7 @@
     "bootstrap": {
       "root": "packages/bootstrap",
       "runtime": "node",
-      "buildCommand": "tsc",
-      "entrypoint": "dist/index.js"
+      "entrypoint": "src/index.ts"  // 👈 Point to the source file so Vercel passes validation
     },
     "demo": {
       "root": "packages/demo",
