@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vercel.sh",
+  "services": {
+    "app": {
+      "root": "app",  // 👈 Change this to match your true frontend folder name
+      "framework": "vite",
+      "bindings": [
+        {
+          "type": "service",
+          "service": "bootstrap",
+          "format": "url",
+          "env": "BOOTSTRAP_SERVICE_URL"
+        }
+      ]
+    },
+    "bootstrap": {
+      "root": "packages/bootstrap",
+      "runtime": "node"
+    },
+    "demo": {
+      "root": "packages/demo",
+      "framework": "vite",
+      "bindings": [
+        {
+          "type": "service",
+          "service": "bootstrap",
+          "format": "url",
+          "env": "BOOTSTRAP_SERVICE_URL"
+        }
+      ]
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    }
+  ]
+}
