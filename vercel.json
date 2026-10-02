@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vercel.sh",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "app": {
       "root": ".",
@@ -16,7 +16,7 @@
     "bootstrap": {
       "root": "packages/bootstrap",
       "runtime": "node",
-      "entrypoint": "src/index.ts"  // 👈 Point to the source file so Vercel passes validation
+      "entrypoint": "src/index.ts"
     },
     "demo": {
       "root": "packages/demo",
