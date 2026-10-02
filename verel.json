@@ -1,8 +1,8 @@
 {
-  "$schema": "https://vercel.sh",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "app": {
-      "root": "app",  // 👈 Change this to match your true frontend folder name
+      "root": ".",
       "framework": "vite",
       "bindings": [
         {
@@ -31,6 +31,12 @@
     }
   },
   "rewrites": [
+    {
+      "source": "/demo/(.*)",
+      "destination": {
+        "service": "demo"
+      }
+    },
     {
       "source": "/(.*)",
       "destination": {
